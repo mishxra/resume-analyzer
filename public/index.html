@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Reviewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Resume Reviewer</h1>
+        <p class="subtitle">Upload your resume and get instant AI-powered feedback</p>
+
+        <div class="upload-area">
+            <label for="resumeInput">
+                <div class="upload-icon">📄</div>
+                <div>Click to upload your resume</div>
+                <div class="upload-text">PDF files only, max 5MB</div>
+                <div class="file-name" id="fileName"></div>
+            </label>
+            <input type="file" id="resumeInput" accept=".pdf" />
+        </div>
+
+        <button id="submitBtn" disabled>Review My Resume</button>
+
+        <div class="loader" id="loader">
+            <div class="spinner"></div>
+            <p>Analyzing your resume...</p>
+        </div>
+
+        <div class="error" id="error"></div>
+
+        <div class="result" id="result">
+            <h2>✨ AI Feedback</h2>
+            <pre id="feedbackText"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

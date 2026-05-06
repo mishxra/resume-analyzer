@@ -1,12 +1,12 @@
 import multer from 'multer'
 import path from 'path'
 
-const storage = multer.diskstorage({                                        //diskstorage: Saves file to my local folder temporarily
+const storage = multer.diskStorage({                                        //diskstorage: Saves file to my local folder temporarily
       destination: function(req,file,cb){
         cb(null, './public/temp')                                          // destination: public/temp
       },
       filename: function(req,file,cb){                                    // filename: Renames file to current timestamp to avoid conflicts
-        cb(null,Data.now()+ path.extname(file.originalname))
+        cb(null,Date.now()+ path.extname(file.originalname))
       }
 })
 

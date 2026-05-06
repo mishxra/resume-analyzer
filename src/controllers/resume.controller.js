@@ -26,7 +26,7 @@ const reviewResumeController = async (req, res)=>{
 
     } catch(error) {
         
-    if(req.file && fs.existSync(req.file.path)){
+    if(req.file && fs.existsSync(req.file.path)){
         fs.unlinkSync(req.file.path)
     }
     return res.status(500).json({
